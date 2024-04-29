@@ -1,0 +1,170 @@
+{
+  "main": {
+    "id": "361163db8a9b1229",
+    "type": "split",
+    "children": [
+      {
+        "id": "962986fab934623a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d27b726d7f16bb3",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "img/Pasted image 20240404011105.png"
+              }
+            }
+          },
+          {
+            "id": "ee3ef92cff52b0c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Channels/0_GetStarted.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36a35fa573ca88a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "7ea1374362ec9712",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b3b8a778b1dc619",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "54e6fafbb8f089f5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "781c95f75c04aa3c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "568c1edb159f7127",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8589c3c41ba1c46",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b6991732bc05ddf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "img/Pasted image 20240404011105.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b4f757c5cef62369",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "img/Pasted image 20240404011105.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "52040239fcbc5b14",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9a9a21470e91259a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "img/Pasted image 20240404011105.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "4b3b8a778b1dc619",
+  "lastOpenFiles": [
+    "img",
+    "Instalando Paquetes.md",
+    "Estructura de React.md",
+    "Channels/0_GetStarted.md",
+    "Channels/1_Primera Parte.md",
+    "Channels",
+    "img/Pasted image 20240404012012.png",
+    "img/Pasted image 20240404011105.png"
+  ]
+}
