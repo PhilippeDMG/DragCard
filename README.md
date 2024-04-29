@@ -36,3 +36,25 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+---
+
+# Parte Django
+
+Crea un entorno con:
+´´´bash
+python -m venv venv
+´´´
+
+Activa el entorno virtual.
+´´´bash
+source venv/bin/activate
+´´´
+
+Instala todos los requerimientos:
+´´´bash
+pip install -r requirements.txt
+´´´
+
+
+---
