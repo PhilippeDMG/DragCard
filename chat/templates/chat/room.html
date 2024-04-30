@@ -1,0 +1,61 @@
+<!-- chat/templates/chat/room.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Sala de Chat</title>
+</head>
+<body>
+    <!-- Un área de texto para mostrar el historial del chat -->
+    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
+    <!-- Un campo de entrada de texto para escribir mensajes -->
+    <input id="chat-message-input" type="text" size="100"><br>
+    <!-- Un botón para enviar mensajes -->
+    <input id="chat-message-submit" type="button" value="Enviar">
+    <!-- Un script que contiene información sobre la sala de chat, serializada en JSON -->
+    {{ room_name|json_script:"room-name" }}
+    <script>
+        // Parsea la información de la sala de chat desde el script JSON
+        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+
+        // Crea un WebSocket para la comunicación bidireccional con el servidor
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host  // La dirección del host actual
+            + '/ws/chat/'  // La ruta para el WebSocket en Django Channels
+            + roomName  // El nombre de la sala de chat, usado como identificador único
+            + '/'
+        );
+
+        // Función que se ejecuta cuando el cliente recibe un mensaje del servidor
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);  // Parsea el mensaje JSON recibido
+            document.querySelector('#chat-log').value += (data.message + '\n');  // Agrega el mensaje al historial del chat
+        };
+
+        // Función que se ejecuta cuando la conexión WebSocket se cierra inesperadamente
+        chatSocket.onclose = function(e) {
+            console.error('La conexión del chat se cerró inesperadamente');
+        };
+
+        // Enfoca el campo de entrada de texto para escribir mensajes
+        document.querySelector('#chat-message-input').focus();
+        // Maneja el evento keyup (tecla presionada) en el campo de entrada de texto
+        document.querySelector('#chat-message-input').onkeyup = function(e) {
+            if (e.key === 'Enter') {  // Si la tecla presionada es Enter
+                document.querySelector('#chat-message-submit').click();  // Simula un clic en el botón de enviar mensaje
+            }
+        };
+
+        // Maneja el evento click en el botón de enviar mensaje
+        document.querySelector('#chat-message-submit').onclick = function(e) {
+            const messageInputDom = document.querySelector('#chat-message-input');  // Obtiene el campo de entrada de texto
+            const message = messageInputDom.value;  // Obtiene el mensaje ingresado por el usuario
+            chatSocket.send(JSON.stringify({  // Envía el mensaje al servidor, serializado en JSON
+                'message': message  // El mensaje en sí
+            }));
+            messageInputDom.value = '';  // Limpia el campo de entrada de texto después de enviar el mensaje
+        };
+    </script>
+</body>
+</html>

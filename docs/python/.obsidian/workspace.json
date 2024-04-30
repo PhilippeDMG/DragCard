@@ -11,9 +11,11 @@
             "id": "7d27b726d7f16bb3",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "img/Pasted image 20240404011105.png"
+                "file": "Channels/2_Segunda Parte.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "img/Pasted image 20240404011105.png",
+                "file": "Channels/2_Segunda Parte.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "img/Pasted image 20240404011105.png",
+                "file": "Channels/2_Segunda Parte.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "img/Pasted image 20240404011105.png"
+                "file": "Channels/2_Segunda Parte.md"
               }
             }
           }
@@ -148,23 +150,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "4b3b8a778b1dc619",
+  "active": "7d27b726d7f16bb3",
   "lastOpenFiles": [
+    "Channels/3_Tercera Parte.md",
+    "Channels/0_GetStarted.md",
+    "Channels/2_Segunda Parte.md",
+    "Channels/1_Primera Parte.md",
+    "img/Pasted image 20240404011105.png",
     "img",
     "Instalando Paquetes.md",
     "Estructura de React.md",
-    "Channels/0_GetStarted.md",
-    "Channels/1_Primera Parte.md",
     "Channels",
-    "img/Pasted image 20240404012012.png",
-    "img/Pasted image 20240404011105.png"
+    "img/Pasted image 20240404012012.png"
   ]
 }

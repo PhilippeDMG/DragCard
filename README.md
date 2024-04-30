@@ -42,19 +42,19 @@ You can preview the production build with `npm run preview`.
 # Parte Django
 
 Crea un entorno con:
-´´´bash
+```bash
 python -m venv venv
-´´´
+```
 
 Activa el entorno virtual.
-´´´bash
+```bash
 source venv/bin/activate
-´´´
+```
 
 Instala todos los requerimientos:
-´´´bash
+```bash
 pip install -r requirements.txt
-´´´
+```
 
 
 ---
