@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "3df923cba404ac94",
+    "type": "split",
+    "children": [
+      {
+        "id": "f658143cd119e82c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a215e5b24fd717cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/Channels/2_Segunda Parte.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "00a5ddcf7eb3893b",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f6d41b3647365d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fca9243e3c445551",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "820975a2414fd3d6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "958f53ede59f64b3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 247.5
+  },
+  "right": {
+    "id": "2f2c87248c47a3ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "1fd2400141309bc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "569838cf6fbccc7f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "python/Channels/2_Segunda Parte.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d342ed82c7848e83",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "python/Channels/2_Segunda Parte.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c5cfc6ab1039a66a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e837c410768c85cf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "python/Channels/2_Segunda Parte.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "a215e5b24fd717cb",
+  "lastOpenFiles": [
+    "python/Channels/1_Primera Parte.md",
+    "python/Channels/2_Segunda Parte.md",
+    "python/Channels/0_GetStarted.md",
+    "python/chat/migrations/__init__.py",
+    "python/chat/migrations",
+    "python/chat/views.py",
+    "python/chat/apps.py",
+    "python/chat/tests.py",
+    "python/chat/models.py",
+    "python/chat/__init__.py",
+    "python/chat/admin.py",
+    "python/chat"
+  ]
+}

@@ -101,4 +101,119 @@ Crea un directorio `templates` en el directorio `chat`. Dentro del directorio `t
 </html>
 ```
 
-Continuaré con las sugerencias en otro mensaje para no exceder el límite de caracteres.
+
+---
+
+### Creando la vista y la URL
+
+Ahora necesitamos crear la función de vista para la vista de índice y vincularla a una URL.
+
+En el archivo `chat/views.py`, añade lo siguiente:
+
+```python
+# chat/views.py
+from django.shortcuts import render
+
+def index(request):
+    return render(request, "chat/index.html")
+```
+
+Para llamar a la vista, necesitamos mapearla a una URL. Creamos un archivo `urls.py` en el directorio `chat` y añadimos el siguiente código:
+
+```python
+# chat/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index"),
+]
+```
+
+Ahora, para que Django encuentre nuestras URLs, necesitamos apuntar el URLconf raíz al módulo `chat.urls`. En `mysite/urls.py`, hacemos lo siguiente:
+
+```python
+# mysite/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path("chat/", include("chat.urls")),
+    path("admin/", admin.site.urls),
+]
+```
+
+### Verificación y Configuración de Channels
+
+Hasta este punto, hemos creado una aplicación de Django básica. Ahora es el momento de integrar Channels.
+
+Comencemos creando una configuración de enrutamiento para Channels. Un enrutamiento de Channels es una aplicación ASGI similar a un URLconf de Django, que le dice a Channels qué código ejecutar cuando recibe una solicitud HTTP.
+
+Ajusta el archivo `mysite/asgi.py` con el siguiente código:
+
+```python
+# mysite/asgi.py
+import os
+from channels.routing import ProtocolTypeRouter
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+
+application = ProtocolTypeRouter(
+    {
+        "http": get_asgi_application(),
+        # Solo HTTP por ahora. (Podemos agregar otros protocolos más tarde).
+    }
+)
+```
+
+Luego, añade la biblioteca Daphne a la lista de aplicaciones instaladas en `mysite/settings.py`:
+
+```python
+# mysite/settings.py
+INSTALLED_APPS = [
+    'daphne',
+    'chat',
+    # otras aplicaciones
+]
+```
+
+Y apunta Daphne a la configuración de enrutamiento raíz. Añade la siguiente línea al final de `mysite/settings.py`:
+
+```python
+# mysite/settings.py
+# Daphne
+ASGI_APPLICATION = "mysite.asgi.application"
+```
+
+### Verificación de Channels
+
+Verifiquemos que el servidor de desarrollo de Channels esté funcionando correctamente. Ejecuta el siguiente comando:
+
+```bash
+$ python3 manage.py runserver
+```
+
+Deberías ver una salida similar a esta:
+
+```
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+August 19, 2022 - 10:20:28
+Django version 4.1, using settings 'mysite.settings'
+Starting ASGI/Daphne version 3.0.2 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+
+Ve a http://127.0.0.1:8000/chat/ en tu navegador y deberías seguir viendo la página de índice que creamos anteriormente.
+
+### Conclusión
+
+Ahora has integrado con éxito Channels en tu proyecto de Django y has creado una página de índice para unirse a las salas de chat. En el siguiente tutorial, continuaremos con la creación de la vista de sala y la comunicación en tiempo real a través de WebSockets.
+
+¡Espero que estas instrucciones sean útiles para ti! ¿Hay algo más en lo que pueda ayudarte?
