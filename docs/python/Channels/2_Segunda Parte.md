@@ -285,21 +285,21 @@ Ve a la página de la sala en http://127.0.0.1:8000/chat/lobby/, la cual ahora m
 
 Escribe el mensaje “hola” y presiona enter. Ahora deberías ver “hola” reflejado en el registro de chat.
 
-Sin embargo, si abres una segunda pestaña del navegador en la misma página de la sala en http://127.0.0.1:8000/chat/lobby/ y escribes un mensaje, el mensaje no aparecerá en la primera pestaña. Para que eso funcione, necesitamos tener múltiples instancias del mismo ChatConsumer capaces de hablar entre sí. Channels proporciona una abstracción de capa de canal que permite este tipo de comunicación entre consumidores.
+Sin embargo, si abres una segunda pestaña del navegador en la misma página de la sala en http://127.0.0.1:8000/chat/lobby/ y escribes un mensaje, el mensaje no aparecerá en la primera pestaña. Para que eso funcione, necesitamos tener múltiples instancias del mismo **ChatConsumer** capaces de hablar entre sí. Channels proporciona una abstracción de capa de canal que permite este tipo de comunicación entre consumidores.
 
 Ve a la terminal donde ejecutaste el comando runserver y presiona Control-C para detener el servidor.
 
 **Habilitar una capa de canal**
 
-Una capa de canal es un tipo de sistema de comunicación que permite que múltiples instancias de consumidores hablen entre sí y con otras partes de Django.
+Una **capa de canal** es un tipo de sistema de comunicación que **permite que múltiples instancias de consumidores hablen entre sí y con otras partes de Django**.
 
 Una capa de canal proporciona las siguientes abstracciones:
 
-- Un canal es un buzón donde se pueden enviar mensajes. Cada canal tiene un nombre. Cualquiera que tenga el nombre de un canal puede enviar un mensaje al canal.
+- Un **canal es un buzón donde se pueden enviar mensajes**. Cada canal tiene un nombre. Cualquiera que tenga el nombre de un canal puede enviar un mensaje al canal.
 
-- Un grupo es un conjunto de canales relacionados. Un grupo tiene un nombre. Cualquiera que tenga el nombre de un grupo puede agregar/eliminar un canal al grupo por nombre y enviar un mensaje a todos los canales en el grupo. No es posible enumerar qué canales están en un grupo particular.
+- **Un grupo es un conjunto de canales relacionados**. Un grupo tiene un nombre. Cualquiera que tenga el nombre de un grupo puede agregar/eliminar un canal al grupo por nombre y enviar un mensaje a todos los canales en el grupo. No es posible enumerar qué canales están en un grupo particular.
 
-Cada instancia de consumidor tiene un nombre de canal único generado automáticamente, y por lo tanto puede comunicarse a través de una capa de canal.
+**Cada instancia de consumidor** *tiene un nombre de canal único generado automáticamente*, y por lo tanto puede comunicarse a través de una **capa de canal**.
 
 En nuestra aplicación de chat, queremos que múltiples instancias de `ChatConsumer` en la misma sala se comuniquen entre sí. Para hacer eso, cada `ChatConsumer` agregará su canal a un grupo cuyo nombre se basa en el nombre de la sala. Eso permitirá que los `ChatConsumers` transmitan mensajes a todos los otros `ChatConsumers` en la misma sala.
 

@@ -126,5 +126,17 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# mysite/settings.py
+# core/settings.py
 ASGI_APPLICATION = "core.asgi.application"
+
+
+# Configuracion de la capa canal
+'''CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+'''
