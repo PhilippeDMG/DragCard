@@ -129,9 +129,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # core/settings.py
 ASGI_APPLICATION = "core.asgi.application"
 
-
-# Configuracion de la capa canal
-'''CHANNEL_LAYERS = {
+# Channels
+ASGI_APPLICATION = "core.asgi.application"
+CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
@@ -139,4 +139,3 @@ ASGI_APPLICATION = "core.asgi.application"
         },
     },
 }
-'''
