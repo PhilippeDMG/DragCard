@@ -432,4 +432,8 @@ Abre una pestaña del navegador
 En la segunda pestaña del navegador, escribe el mensaje "hello" y presiona enter. Ahora deberías ver "hello" reflejado en el registro de chat en ambas pestañas del navegador.
 
 ¡Ahora tienes un servidor de chat básico y completamente funcional!
+
+
+
+
 ---

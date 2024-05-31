@@ -1,24 +1,21 @@
 
----
-
-### **Tutorial Parte 3: Reescribir el Servidor de Chat como Asincrónico**
+# **Tutorial Parte 3: Reescribir el Servidor de Chat como Asincrónico**
 
 Este tutorial da continuidad a donde quedó el Tutorial 2. Vamos a reescribir el código del consumidor para que sea asíncrono en lugar de síncrono para mejorar su rendimiento.
 
-**Reescribir el consumidor para ser asíncrono**
+## **Reescribir el consumidor para ser asíncrono**
 
 El `ChatConsumer` que hemos escrito actualmente es síncrono. Los consumidores síncronos son convenientes porque pueden llamar a funciones de E/S síncronas regulares, como aquellas que acceden a modelos de Django, sin escribir código especial. Sin embargo, los consumidores asíncronos pueden proporcionar un mayor rendimiento ya que no necesitan crear hilos adicionales al manejar las solicitudes.
 
 El `ChatConsumer` solo utiliza bibliotecas nativas asíncronas (Channels y la capa de canales) y en particular no accede a modelos síncronos de Django. Por lo tanto, puede ser reescrito como asíncrono sin complicaciones.
 
-**Reescribamos el `ChatConsumer` para que sea asíncrono.**
+## **Reescribamos el `ChatConsumer` para que sea asíncrono**
 
 ```python
 # chat/consumers.py
 import json
 
 from channels.generic.websocket import AsyncWebsocketConsumer
-
 
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
@@ -60,18 +57,18 @@ Este nuevo código para `ChatConsumer` es muy similar al código original, con l
 - Se utiliza `await` para llamar a funciones asíncronas que realizan E/S.
 - Ya no se necesita `async_to_sync` al llamar a métodos en la capa de canales.
 
-¡Verifiquemos que el consumidor para la ruta `/ws/chat/ROOM_NAME/` todavía funcione! Para iniciar el servidor de desarrollo de Channels, ejecuta el siguiente comando:
+## **Verificación del funcionamiento**
 
-```
+Para iniciar el servidor de desarrollo de Channels, ejecuta el siguiente comando:
+
+```bash
 $ python3 manage.py runserver
 ```
 
-Abre una pestaña del navegador en la página de la sala en http://127.0.0.1:8000/chat/lobby/. Abre una segunda pestaña del navegador en la misma página de la sala.
+Abre una pestaña del navegador en la página de la sala en [http://127.0.0.1:8000/chat/lobby/](http://127.0.0.1:8000/chat/lobby/). Abre una segunda pestaña del navegador en la misma página de la sala.
 
 En la segunda pestaña del navegador, escribe el mensaje "hola" y presiona enter. Ahora deberías ver "hola" reflejado en el registro de chat tanto en la segunda pestaña del navegador como en la primera.
 
 ¡Ahora tu servidor de chat es completamente asíncrono!
 
 Este tutorial continúa en el Tutorial 4.
-
----
