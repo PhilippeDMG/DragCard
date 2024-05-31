@@ -1,6 +1,3 @@
-¡Claro, estaré encantado de ayudarte a mejorar esta documentación! Aquí tienes algunas sugerencias para hacerla más clara y fácil de seguir:
-
----
 
 ## Construyendo un Servidor de Chat con Django y Channels
 

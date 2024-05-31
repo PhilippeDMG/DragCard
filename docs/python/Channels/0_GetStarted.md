@@ -1,9 +1,6 @@
 
 
 ---
-
-¡Entendido! Empecemos desde el principio.
-
 ### Parte 1: Configuración básica
 
 #### Paso 1: Instalación de Channels y Daphne

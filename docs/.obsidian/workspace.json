@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/Channels/1_Primera Parte.md",
-                "mode": "preview",
+                "file": "Prompts.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python/Channels/1_Primera Parte.md",
+                "file": "Prompts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python/Channels/1_Primera Parte.md",
+                "file": "Prompts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python/Channels/1_Primera Parte.md"
+                "file": "Prompts.md"
               }
             }
           }
@@ -148,12 +148,15 @@
   },
   "active": "a215e5b24fd717cb",
   "lastOpenFiles": [
+    "python/Instalando Paquetes.md",
+    "python/Estructura de React.md",
+    "python/WS_Introduccion.md",
+    "python/Channels/0_GetStarted.md",
+    "python/Channels/1_Primera Parte.md",
     "python/Channels/4_Cuarta Parte.md",
     "python/Channels/2_Segunda Parte.md",
     "python/Channels/3_Tercera Parte.md",
     "Prompts.md",
-    "python/Channels/1_Primera Parte.md",
-    "python/Channels/0_GetStarted.md",
     "python/chat/migrations/__init__.py",
     "python/chat/migrations",
     "python/chat/views.py",
