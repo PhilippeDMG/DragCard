@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "08a317925becba6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "52715e11b517e405",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "02e1950df0f46417",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Documentation.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eedcee2b7b8997a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a7ad3a7dbc6678f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49aab3f4a4cbb8eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e28bf38088f96541",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b1f9fb2aaace8d7a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8507aad4172cbe1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "023d0cbf0adf00e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac28ebc22ce64f50",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Documentation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ef7d7a4c0965c79b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Documentation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0400dbb751417450",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2b211657eb11f486",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Documentation.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "02e1950df0f46417",
+  "lastOpenFiles": [
+    "Documentation.md"
+  ]
+}
