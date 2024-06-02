@@ -19,18 +19,20 @@
     <script>
         // Obtiene el nombre de la sala de chat del script JSON
         const roomName = JSON.parse(document.getElementById('room-name').textContent);
-        console.log('AQUI --> ' + roomName) 
-        
+        console.log('AQUI --> ' + roomName)
+
         // se inserta un span con el nombre de la sala
         const elementH1 = document.createElement('h1');
         elementH1.textContent = 'Estas en la sala: ' + roomName;
         document.body.appendChild(elementH1);
 
 
+
         // Crea un nuevo WebSocket que se conecta al servidor en la ruta especificada
         const chatSocket = new WebSocket(
             'ws://' + window.location.host + '/ws/chat/' + roomName + '/'
         );
+
 
         // Función que se llama cada vez que el servidor envía un mensaje a través del WebSocket
         chatSocket.onmessage = function (e) {
@@ -39,7 +41,7 @@
             const data = JSON.parse(e.data);
 
             // Agrega el mensaje al registro de chat en la página
-            document.querySelector('#chat-log').value += (data.message + '\n');
+            document.querySelector('#chat-log').value += ('<' + data.browser + '> ' + data.message + '\n');
         };
 
         // Función que se llama si el WebSocket se cierra inesperadamente
@@ -52,9 +54,15 @@
 
         // Función que se llama cada vez que el usuario presiona una tecla en el campo de entrada del mensaje
         document.querySelector('#chat-message-input').onkeyup = function (e) {
-            // Si la tecla era Enter, simula un clic en el botón de enviar
             if (e.key === 'Enter') {
-                document.querySelector('#chat-message-submit').click();
+
+                var nameBrowser = navigator.userAgent;
+                chatSocket.send(JSON.stringify({
+                    'message': document.querySelector('#chat-message-input').value,
+                    'browser': nameBrowser
+                }));
+                
+                document.querySelector('#chat-message-input').value = '';
             }
         };
 
@@ -63,9 +71,15 @@
             // Obtiene el mensaje del campo de entrada
             const messageInputDom = document.querySelector('#chat-message-input');
             const message = messageInputDom.value;
+            
+            const nameBrowser = navigator.userAgent;
+            
 
             // Envía el mensaje al servidor a través del WebSocket
-            chatSocket.send(JSON.stringify({ 'message': message }));
+            chatSocket.send(JSON.stringify({
+                'message': message,
+                'browser': nameBrowser,
+            }));
 
             // Borra el campo de entrada
             messageInputDom.value = '';
